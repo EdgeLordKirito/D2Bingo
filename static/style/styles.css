@@ -35,7 +35,6 @@ main {
 }
 
 .card {
-    background-color: #ffffff; /* Example background color */
     text-align: center; /* Center text horizontally */
     display: flex;
     justify-content: center; /* Center text vertically */
@@ -48,7 +47,6 @@ main {
 }
 
 .card:hover {
-    background-color: #4CAF50; /* Green background color on hover */
     transform: scale(1.1); /* Increase size by 10% on hover */	 
 }
 
