@@ -1,0 +1,198 @@
+:root {
+    --card-background: #f0f0f0; /* Background color for cards */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Example font family */
+    background-color: #2C2F33; /* Example background color */
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.tilte-header {
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Add space between title and cards */
+}
+
+.card-container {
+	width: 60vw;
+	height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust column width as needed */
+    gap: 5vh; /* Adjust gap between cards */
+}
+
+.card {
+    background-color: #ffffff; /* Example background color */
+    text-align: center; /* Center text horizontally */
+    display: flex;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text vertically */
+    border-radius: 5px; /* Optional border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease, background-image 0.3s ease; /* Smooth transitions for background color and transform */
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.card:hover {
+    background-color: #4CAF50; /* Green background color on hover */
+    transform: scale(1.1); /* Increase size by 10% on hover */	 
+}
+
+
+#last-wish {
+    background-image: url('../images/LastWish.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 4rem;
+	color: #ffffff;
+}
+
+#last-wish:hover {
+    background-image: url('../images/LastWishBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 4rem;
+	color: #ffffff;
+}
+
+#garden-of-salvation {
+    background-image: url('../images/GardenOfSalvation.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#garden-of-salvation:hover {
+    background-image: url('../images/GardenOfSalvationBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#deep-stone-crypt {
+    background-image: url('../images/DeepStoneCrypt.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#deep-stone-crypt:hover {
+    background-image: url('../images/DeepStoneCryptBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#vault-of-glass {
+    background-image: url('../images/VaultOfGlass.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 4rem;
+	color: #ffffff;
+}
+
+#vault-of-glass:hover {
+    background-image: url('../images/VaultOfGlassBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 4rem;
+	color: #ffffff;
+}
+
+#vow-of-the-disciple {
+    background-image: url('../images/VowOfTheDisciple.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#vow-of-the-disciple:hover {
+    background-image: url('../images/VowOfTheDiscipleBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#kings-fall {
+    background-image: url('../images/KingsFall.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 4rem;
+	color: #ffffff;
+}
+
+#kings-fall:hover {
+    background-image: url('../images/KingsFallBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 4rem;
+	color: #ffffff;
+}
+
+#root-of-nightmares {
+    background-image: url('../images/RootOfNightmares.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#root-of-nightmares:hover {
+    background-image: url('../images/RootOfNightmaresBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#crotas-end {
+    background-image: url('../images/CrotasEnd.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 4rem;
+	color: #ffffff;
+}
+
+#crotas-end:hover {
+    background-image: url('../images/CrotasEndBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 4rem;
+	color: #ffffff;
+}
+
+#salvations-edge {
+    background-image: url('../images/SalvationsEdge.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}
+
+#salvations-edge:hover {
+    background-image: url('../images/SalvationsEdgeBlur.webp');
+	background-size: 150%;
+    background-position: center;
+	font-size: 3rem;
+	color: #ffffff;
+}

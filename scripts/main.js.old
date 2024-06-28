@@ -1,0 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all grid items
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    // Add click event listener to each grid item
+    gridItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            // Toggle 'active' class
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+});

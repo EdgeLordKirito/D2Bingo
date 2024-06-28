@@ -1,0 +1,135 @@
+:root {
+    /* Define CSS variables */
+    --primary-background-color: #2C2F33; /* Default background color */
+	--secondary-background-color: #1C1E21;
+    --foreground-color: #000000; /* Default foreground color */
+	--border-color: #FAF9F6;
+	--text-color: #FAF9F6;
+    --border-size: 1px; /* Default border size */
+	--grid-size: 12vh;
+    --row-amount: 5; /* Default number of rows */
+    --column-amount: 5; /* Default number of columns */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure full viewport height */
+    background-color: #2C2F33;
+}
+
+.topnav {
+    width: 100%;
+    background-color: var(--secondary-background-color);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Place at the top of the viewport */
+    left: 0; /* Align to the left */
+}
+
+.topnav .left-items {
+    display: flex;
+    align-items: center;
+}
+
+.topnav button {
+    margin-right: 10px;
+    color: white;
+    background-color: var(--primary-background-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav button:hover {
+    background-color: #0056b3;
+}
+
+.BingoBody{
+	background: var(--primary-background-color);
+	max-width: calc(var(--grid-size) * var(--row-amount));
+}
+
+.BingoHeader {
+	background: url('images/GardenFirst.webp') no-repeat center center/cover;
+	width: 100%;
+	min-height: 10vh;
+	margin-bottom: 4vh;
+}
+
+.BingoHeader h1 {
+	font-size: 4.5em;
+	text-align: center;
+	color: #f0f0f0; /* Off-white text color */
+    padding: 3vh; /* Example padding */
+	/*
+	text-shadow:
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; */ /*Small black border around text*/
+}
+
+
+.BingoBoard {
+    display: grid;
+    grid-template-columns: repeat(var(--column-amount), 1fr);
+    grid-template-rows: repeat(var(--row-amount), 1fr);
+    width: 100%;
+    max-width: calc((var(--grid-size) * var(--column-amount)) + (var(--column-amount) * var(--border-size) * 2));
+	max-height: calc((var(--grid-size) * var(--row-amount)) + (var(--row-amount) * var(--border-size) * 2));
+    margin: 0 auto;
+}
+
+.BingoBoard div {
+	color: var(--text-color);
+	max-width: var(--grid-size);
+	max-height: var(--grid-size);
+	width: var(--grid-size);
+    height: var(--grid-size);
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+.BingoBoard div {
+    border-top: var(--border-size) solid var(--border-color);
+    border-left: var(--border-size) solid var(--border-color);
+}
+
+/* Remove redundant borders */
+.BingoBoard div:nth-child(5n) { /* Last column */
+    border-right: var(--border-size) solid var(--border-color);
+}
+.BingoBoard div:nth-last-child(-n+5) { /* Last row */
+    border-bottom: var(--border-size) solid var(--border-color);
+}
+
+.grid-item {
+	display: flex;
+	font-size: 1.2em;
+	overflow: hidden;
+	align-items: center;
+	text-align: center;
+    justify-content: center;
+	user-select: none;
+	cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.grid-item.active {
+    background-color: rgba(255, 0, 0, 0.5); /* Example active state */
+}
+
+.grid-item.won {
+    background-color: rgba(0, 255, 0, 0.5); /* Example active state */
+}
